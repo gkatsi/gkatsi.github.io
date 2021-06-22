@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta
+       charset="iso-8859-1">
+    <meta
+       name="viewport" content="width=device-width, initial-scale=1">
+    <title>George Katsirelos</title>
+    <style type="text/css">
+      body {
+        margin:40px auto;
+        max-width:850px;
+        line-height:1.6;
+        font-size:18px;
+        padding:0 10px;
+        color:#333;
+        font-family: Verdana, Myriad Web, Syntax, sans-serif;
+      }
+      h1,h2,h3 {
+        line-height:1.2
+      }
+
+      address img {float: right}
+      address {
+        padding-top: .5em;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-bottom: .5em;
+        margin-top:  3em;
+        border-top: 1px solid black;
+        clear: both;
+      }
+
+</style>
+  </head>
+
+  <body>
+    <h1>George Katsirelos </h1>
+    
+    I am a researcher at the 
+    <a href="https://www6.inrae.fr/mia-paris/Equipes/EkINocs">EkINocs</a> team of the 
+    <a href="https://www6.inrae.fr/mia-paris/">MIA Paris</a> unit
+    at <a href="http://www.inrae.fr/">INRAE</a>.  
+
+    <h2>Research</h2>
+
+    I work on all aspects of combinatorial optimization, focusing
+    especially on techniques and problems arising in constraint
+    programming and Boolean satisfiability.
+
+    <h4>Software</h4>
+
+    <ul>
+      <li> <a href="minicsp.html">Minicsp</a> is a clause learning CSP
+      solver that I developed based on the ideas in my thesis (see
+	<a href="#kbaaai05">[Katsirelos and Bacchus, AAAI-2005]</a>,
+	or my <a href="#thesis">thesis</a>). 
+      </li>
+      <li> GlucosER is a CDCL (conflict-driven clause learning) SAT
+      solver that uses a restriction of extended resolution. The
+      objective is to get significant speedups in some instances due
+      to the more powerful proof system, without sacrificing
+      performance compared to current CDCL solvers. For more, see
+      <a href="#aksaaai10">[Audemard, Katsirelos and Simon,
+      AAAI-2010]</a>. Download
+      the <a href="glucoser-1.0.tar.gz">source tarball</a> of glucosER
+      1.0 or get a <a href="glucoser_static.zip">statically linked
+      linux 32-bit binary</a>. Note that you
+      need <a href="http://www.boost.org">boost</a> to compile
+      glucosER.
+      </li>
+      <li> MCSMUS is a state-of-the-art tool
+      to extract MUSes from CNF formulas, described
+      in <a href="#bkcav15">[Bacchus and Katsirelos, CAV 2015]</a>
+      and <a href="#bkcpaior16">[Bacchus and Katsirelos, CPAIOR
+      2016]</a>. It can extract either a single MUS or all MUSes and
+      comes
+      with <a href="http://minisat.se/">MiniSAT</a>, <a href="http://www.labri.fr/perso/lsimon/glucose/">Glucose</a>
+      and <a href="http://fmv.jku.at/lingeling/">lingeling</a>
+      backends. Its source is available
+      on <a href="https://bitbucket.org/gkatsi/mcsmus">Bitbucket</a>.
+      </li>
+      <li> GC-CDCL is a solver for the graph coloring problem, which
+	combines constraint- and satisfiability- based reasoning along
+	with a few novel ideas that make it perform well both on small
+	graphs (a few hundred vertices) and on graphs with millions of
+	vertices. It was developed in collaboration with Emmanuel
+	Hebrard and decsribed in <a href="#hk-cp18">[Hebrard and
+	Katsirelos, CP 2018]</a> and <a href="#hk-cpaior19">[Hebrard
+	and Katsirelos, CPAIOR 2019]</a>. It is available
+	on <a href="https://bitbucket.org/gkatsi/gc-cdcl/src">Bitbucket</a>. </li>
+    </ul>
+
+    <h4>Conference papers</h4>
+
+    <a href="http://dblp.uni-trier.de/pers/hd/k/Katsirelos:George">DBLP</a>, <a href="https://scholar.google.com/citations?user=EvD8ClcAAAAJ&hl=en">Google
+    Scholar</a>
+    
+    <ol>
+      <li id="tdk-ijcai21"> <a href="papers/tdk-ijcai21.pdf">Improved
+	  Acyclicity Reasoning for Bayesian Network Structure Learning
+	  with Constraint Programming</a>. Fulya Tr&ouml;sser, Simon
+	  de Givry, George Katsirelos. Proceedings of IJCAI 2021. </li>
+      <li id="tdk-cpaior20"> <a href="papers/tdk-cpaior2020.pdf">Relaxation-Aware
+	  Heuristics for Exact Optimization in Graphical
+	  Models</a>. Fulya Tr&ouml;sser, Simon de Givry, George
+	  Katsirelos. Proceedings of CPAIOR 2020. </li>
+      <li id="bck-aaai20"> <a href="papers/bck-aaai20.pdf">Chain
+	  Length and CSPs Learnable with Few Queries</a>. Christian
+	  Bessiere, Clement Carbonnel, George Katsirelos. Proceedings
+	  of AAAI 2020. </li>
+      <li id="srvbkg-ictai19"> <a href="papers/srvbkg-ictai19.pdf">Guaranteed
+	  Diversity & Quality for the Weighted CSP</a>. Thomas Schiex,
+	  Manon Ruffini, Jelena Vucinic, Sophie Barbe, George
+	  Katsirelos and Simon de Givry. Proceedings of ICTAI
+	  2019. </li>
+      <li id="hk-cpaior19"> <a href="papers/hk-cpaior19.pdf">A Hybrid
+	  Approach for Exact Coloring of Massive Graphs</a>. Emmanuel
+	Hebrard and George Katsirelos. Proceedings of CPAIOR
+	2019. <a href="https://bitbucket.org/gkatsi/gc-cdcl/src">code</a></li>
+      <li id="hk-cp18"> <a href="papers/hk-cp18.pdf">Clause Learning
+	  and New Bounds for Graph Coloring</a>. Emmanuel Hebrard and
+	George Katsirelos. Proceedings of CP 2018. <b>Best paper
+	  award</b>. <a href="https://bitbucket.org/gkatsi/gc-cdcl/src">code</a></li>
+      <li id="hk-ijcai18">
+	<a href="papers/hk-ijcai18.pdf">Conflict Directed Clause
+	  Learning for the Maximum Weighted Clique
+	  Problem</a>. Emmanuel Hebrard and George
+	  Katsirelos. Proceedings of IJCAI 2018.
+      </li>
+      <li id="dgk-cp17">
+	<a href="papers/dgk-cp17.pdf">Clique Cuts in Weighted
+	Constraint Satisfaction</a>. Simon de Givry and George
+	Katsirelos. Proceedings of CP 2017.
+      <li id="bhkkw-ijcai16">
+	<a href="papers/bhkkw-ijcai16.pdf">Ranking
+	Constraints</a>. Christian Bessiere, Emmanuel Hebrard, George
+	Katsirelos, Zeynep Kiziltan and Toby Walsh. Proceedings of
+	IJCAI 2016.
+      </li>
+      <li id="bkcpaior16">
+	<a href="papers/bkcpaior16.pdf">Finding a collection of MUSes
+	incrementally</a>. Fahiem Bacchus and George
+	Katsirelos. Proceedings of CPAIOR 2016.
+      </li>
+      <li>
+	<a href="papers/agkszcp15.pdf">Anytime Hybrid Best-First
+	Search with Tree Decomposition for Weighted CSP</a>. David
+	Allouche, Simon de Givry, George Katsirelos, Thomas Schiex and
+	Matthias Zytnicki. Proceedings of CP 2015.
+      </li>
+      <li id="bkcav15"> 
+	<a href="papers/bkcav15.pdf">Using Minimal Correction Sets to
+	more Efficiently Compute Minimal Unsatisfiable Sets</a>. Fahiem
+	Bacchus and George Katsirelos. Proceedings of CAV 2015
+      </li>
+      <li> 
+	<a href="papers/bhkwijcai15.pdf"> Reasoning about Connectivity
+        Constraints.</a> Christian Bessiere, Emmanuel Hebrard, George
+        Katsirelos and Toby Walsh. Proceedings of IJCAI 2015.
+      </li>
+      <li>
+	<a href="papers/bdtkaaai14.pdf">Relaxation Search: a Simple
+	Way of Managing Optional Clauses.</a> Fahiem Bacchus, Jessica
+	Davies, Maria Tsimpoukelli and George Katsirelos. Proceedings
+	of AAAI 2014.
+      </li>
+      <li>
+	<a href="papers/bhkkpqwcp14.pdf">The Balance Constraint
+	Family.</a> Christian Bessiere, Emmanuel Hebrard, George
+	Katsirelos, Zeynep Kiziltan, Emilie Picard-Cantin, Claude-Guy
+	Quimper and Toby Walsh. Proceedings of CP 2014.
+      </li>
+      <li>
+	<a href="papers/bchkwijcai13.pdf">Detecting and Exploiting
+	Subproblem Tractability.</a> Christian Bessiere,Clement
+	Carbonnel, Emmanuel Hebrard, George Katsirelos and Toby
+	Walsh. Proceedings of IJCAI 2013.
+      </li>
+      <li>
+	<a href="papers/bchklnqwijcai13.pdf">Constraint Acquisition
+	via Partial Queries.</a> Christian Bessiere, Remi Coletta,
+	Emmanuel Hebrard, George Katsirelos, Nadjib Lazaar, Nina
+	Narodytska, Claude-Guy Quimper and Toby Walsh. Proceedings of
+	IJCAI 2013.
+      </li>
+      <li>
+	<a href="papers/ksssaaai13.pdf">Resolution and
+	Parallelizability: Barriers to the Efficient Parallelization
+	of SAT Solvers.</a> George Katsirelos, Ashish Sabharwal, Horst
+	Samulowitz and Laurent Simon. Proceedings of AAAI 2013.
+      </li>
+      <li>
+	<a href="papers/knwcp12.pdf">The <span style="font-variant:
+	small-caps;">SeqBin</span> constraint revisited.</a> George
+	Katsirelos, Nina Narodytska and Toby Walsh. Proceedings of CP
+	2012. An extended version of this, including all proofs, is
+	available on <a href="http://arxiv.org/abs/1207.1811">arxiv</a>.
+      </li>
+      <li>
+	<a href="papers/atagkbscp12.pdf">Computational Protein Design as a
+	Cost Function Network Optimization Problem.</a> David
+	Allouche, Seydou Traoré, Isabelle André, Simon de Givry,
+	George Katsirelos, Sophie Barbe and Thomas Schiex. Proceedings of
+	CP 2012.
+      </li>
+      <li>
+	<a href="papers/kscp12.pdf">Eigenvector centrality in
+	industrial SAT instances.</a> George Katsirelos and Laurent
+	Simon. Proceedings of CP 2012.
+      </li>
+      <li>
+	<a href="papers/kssat12.pdf">Learning Polynomials over GF(2)
+	  in a SAT Solver (Poster Presentation). </a> George
+	  Katsirelos, Laurent Simon. Proceedings of SAT
+	  2012, LNCS 7317, 496--497, 2012. 
+	<a href="http://www.springerlink.com/content/3m68w4n86960j026/">
+	  Published version. </a>
+      </li>
+      <li>
+	<a href="papers/dknwaaai11.pdf">Complexity of and Algorithms
+	for Borda Manipulation.</a> Jessica Davies, George Katsirelos,
+	Nina Narodytska and Toby Walsh. Proceedings of AAAI-2011,
+	2011. <a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI11/paper/view/3613">Published
+	version.</a> <b>Outstanding paper award</b>
+      </li>
+      <li>
+	<a href="papers/bknqwcp10.pdf">Decomposition of the NValue
+	Constraint.</a> Christian Bessiere, George Katsirelos, Nina
+	Narodytska, Claude-Guy Quimper and Toby Walsh. Proceedings of
+	CP-2010, LNCS 6308, 114--128, 2010.
+	<a href="http://www.springerlink.com/content/86r3v02135r02617/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/knwcp10.pdf">On The Complexity and Completeness 
+	  of Static Constraints for Breaking Row and Column Symmetry.</a> 
+	George Katsirelos, Nina
+	Narodytska and Toby Walsh. Proceedings of CP-2010,
+	LNCS 6308, 305--320, 2010.
+	<a href="http://www.springerlink.com/content/n28250297t434464/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/kwecai10.pdf">Symmetries of Symmetry Breaking
+	Constraints.</a> George Katsirelos, Toby Walsh. Proceedings of
+	ECAI-2010, 861--866, 2010.
+	<a href="http://www.booksonline.iospress.nl/Content/View.aspx?piid=17869">Published version</a>.
+      </li>
+      <li id="aksaaai10">
+	<a href="papers/aksaaai10.pdf">A Restriction of Extended Resolution for Clause Learning SAT
+	  Solvers.</a> Gilles Audemard, George Katsirelos and Laurent
+	  Simon. Proceedings of AAAI-2010, 15-20, 2010.
+	<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/view/1811">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/bknqwaaai10.pdf">Propagating Conjunctions of
+	  AllDifferent Constraints.</a> Christian Bessiere, George
+	  Katsirelos, Nina Narodytska, Claude-Guy Quimper and Toby
+	  Walsh. Proceedings of AAAI-2010, 27-32, 2010. 
+	<a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI10/paper/view/1815">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/kmnwcp09.pdf">Restricted Global Grammar
+	  Constraints.</a> George Katsirelos, Sebastian Maneth, Nina
+	  Narodytska and Toby Walsh. Proceedings of CP-2009, LNCS
+	  5732, 501-508, 2009.
+	<a href="http://www.springerlink.com/content/m1230t5471t88x48/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/bknwijcai09.pdf">Circuit Complexity and
+	  Decompositions of Global Constraints.</a>  Christian
+	  Bessiere, George Katsirelos, Nina Narodytska and Toby
+	  Walsh. Proceedings of IJCAI-2009, 2009.
+	<a href="http://www.aaai.org/ocs/index.php/IJCAI/IJCAI-09/paper/view/649">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/bknqwijcai09.pdf">Decompositions of All
+	  Different, Global Cardinality and Related Constraints.</a>
+	  Christian Bessiere, George Katsirelos, Nina Narodytska,
+	  Claude-Guy Quimper and Toby Walsh. Proceedings of
+	  IJCAI-2009, 2009.
+	<a href="http://www.aaai.org/ocs/index.php/IJCAI/IJCAI-09/paper/view/498">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/knwcpaior09.pdf">Reformulating Global Grammar
+	  Constraints.</a> George Katsirelos, Nina Narodytska and Toby
+	  Walsh. Proceedings of CPAIOR-2009, LNCS 5547, 132-147, 2009.
+	<a href="http://www.springerlink.com/content/7x5885607t76p725/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/knwercim08.pdf">Combining Symmetry Breaking
+	and Global Constraints.</a> George Katsirelos, Nina Narodytska,
+	and Toby Walsh. "Recent Advances in Constraints", 
+	Post-conference proceedings of CSCLP-2008, LNAI 5655, 2009.
+	<a href="http://www.springerlink.com/content/t782lxh353k1w82w/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/knwcpaior08.pdf">The Weighted CFG Constraint.</a>
+	George Katsirelos, Nina Narodytska and Toby Walsh, Proceedings
+	of CP-AI-OR 2008, LNCS 5015, 323-327, 2008.
+	<a href="http://www.springerlink.com/content/v394216214214445/">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/kwcp07.pdf">A Compression Algorithm for Large
+	Arity Extensional Constraints.</a> George Katsirelos and Toby
+	Walsh, Proceedings of CP-2007, LNCS 4741, 379-393, 2007. 
+	<a href="http://www.springerlink.com/content/603745776j170q35/">
+	  Published version</a>.
+      </li>
+      <li id="kbaaai05">
+	<a href="papers/katsirelos-bacchus-aaai05.pdf">Generalized
+	Nogoods in CSPs.</a> George Katsirelos and Fahiem Bacchus, The
+	twentieth national conference on artificial intelligence --
+	AAAI-05.
+	<a href="http://www.aaai.org/Papers/AAAI/2005/AAAI05-062.pdf">
+	  Published version</a>.
+      </li>
+      <li>
+	<a href="papers/cp2003.pdf">Unrestricted Nogood Recording in
+	  CSP search.</a> George Katsirelos and Fahiem Bacchus, Ninth
+	International Conference on Principles and Practice of
+	Constraint Programming--CP 2003. <a
+	  href="papers/cp2003-full.ps">Extended version</a>.
+	<a href="http://www.springerlink.com/content/gxmpbjq7wc57ve53/">
+	  Published version</a>.
+      </li>
+
+      <li>
+	<a href="papers/cp2001.ps">GAC on conjunctions of
+	  constraints.</a> G. Katsirelos and F. Bacchus, Principles
+	and Practice of Constraint Programming--CP 2001, pages
+	610--614, 2001. <a href="http://www.springerlink.com/content/6j566gly198cagk2/">
+	  Published version</a>
+      </li>
+    </ol>
+
+    <h4>Journal papers</h4>
+    <ol>
+      <li>
+	<a href="rvgkbs-algorithms21.pdf">Guaranteed Diversity and
+	Optimality in Cost Function Network Based Computational
+	Protein Design Methods</a>. Manon Ruffini, Jelena Vucinic,
+	Simon de Givry, George Katsirelos, Sophie Barbe, Thomas
+	Schiex. Algorithms 14, no. 6: 168.
+	2021. <a href="https://doi.org/10.3390/a14060168">DOI</a>
+      </li>
+      <li>
+	<a href="hk-jair20.pdf">Constraint and Satisfiability Reasoning
+	for Graph Coloring</a>. Emmanuel Hebrard and George
+	Katsirelos. Journal of Artificial Intelligence Research (JAIR)
+	69: 33-65,
+	2020. <a href="https://doi.org/10.1613/jair.1.11313">DOI</a>
+      </li>
+      <li>
+	<a href="https://doi.org/10.1007/s10601-016-9245-y">Multi-Language
+        Evaluation of Exact Solvers in Graphical Model Discrete
+        Optimization</a>. Barry Hurley, Barry O'Sullivan, David Allouche,
+        George Katsirelos, Thomas Schiex, Matthias Zytnicki, Simon de
+        Givry. Constraints, 2016.
+      </li>
+      <li>
+	<a href="http://dx.doi.org/10.1016/j.artint.2014.07.005">Complexity
+	of and algorithms for the manipulation of Borda, Nanson's and
+	Baldwin's voting rules.</a>  Jessica Davies, George
+	Katsirelos, Nina Narodytska, Toby Walsh, Lirong
+	Xia. Artificial Intelligence 217: 20-42, 2014
+      </li>
+      <li>
+	<a href="http://dx.doi.org/10.1016/j.artint.2014.03.005">
+	  Computational protein design as an optimization problem.</a>
+	David Allouche, Isabelle André, Sophie Barbe, Jessica Davies,
+	Simon de Givry, George Katsirelos, Barry O'Sullivan, Steven
+	D. Prestwich, Thomas Schiex, Seydou Traoré. Artificial
+	Intelligence 212: 59-79, 2014.
+      </li>
+      <li>
+	<a href="https://academic.oup.com/bioinformatics/article/29/17/2129/246051/A-new-framework-for-computational-protein-design">
+	  A New Framework for Computational Protein Design through
+	  Cost Function Network Optimization. </a> S. Traoré,
+	  D. Allouche, I. André, S. de Givry, G. Katsirelos, T. Schiex,
+	  S. Barbé. Bioinformatics 29(17):2129-2136, 2013.
+      </li>
+      <li>
+	<a href="papers/bknvjair11.pdf">
+	  The Complexity of Integer Bound Propagation. </a>
+	Lucas Bordeaux, George Katsirelos, Nina Narodytska and Moshe
+	Y. Vardi. In Journal of Artificial Intelligence
+	Research (JAIR), 40, 657--676, 2011.
+	<a href="http://jair.org/papers/paper3248.html">Published version.</a>
+      </li>
+      <li>
+	The Weighted Grammar Constraint. George Katsirelos, Nina
+	  Narodytska and Toby Walsh. Annals of Operations Research,
+	  2010. <a href="http://www.springerlink.com/content/ql571x4525378t23/">
+	  Published version</a>
+      </li>
+    </ol>
+
+    <h4>Selected Workshop papers</h4>
+    <ol>
+      <li>
+	<a href="papers/dknwcomsoc10.pdf"> An Empirical Study of Borda
+	Manipulation</a>. Jessica Davies, George Katsirelos, Nina
+	Narodytska and Toby Walsh. Third International Workshop on
+	Computational Social Choice,
+	COMSOC-2010, 2010. (<a href="http://ccc.cs.uni-duesseldorf.de/COMSOC-2010/">link</a>)
+      </li>
+      <li>
+	<a href="papers/jbkwwigsk08.pdf">Two Encodings of DNNF
+	Theories</a>.  Jean Christoph Jung, Pedro Barahona, George
+	Katsirelos and Toby Walsh. ECAI'08 Workshop on Inference
+	methods based on Graphical Structures of
+	Knowledge, 2008. (<a href="http://www.irit.fr/LC/">link</a>)
+      </li>
+    </ol>
+
+
+    <h4 id="thesis">Thesis</h4>
+    <a href="http://hdl.handle.net/1807/16737">Nogood Processing in
+    CSPs</a>, George Katsirelos, PhD Thesis, University of Toronto,
+    2008.
+
+
+    <address><a href="mailto:gkatsi@gmail.com">George Katsirelos</a></address>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>minicsp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="http://www.inra.fr/mia/T/katsirelos/style.css" media="screen">
+  </head>
+
+  <body>
+    <h1>minicsp</h1>
+
+    Minicsp is a clause learning CSP solver.
+
+    <h4>Features</h4>
+
+    Minicsp is a clause learning CSP solver. Briefly, it combines
+    clause learning, as it is used in SAT solvers, with the ability to
+    use global constraints. In terms of modeling, it contains
+    implementations of several constraints, either by providing a
+    propagator or a decomposition. A full list of supported
+    constraints is in the
+    files <a href="https://bitbucket.org/gkatsi/minicsp/src/8c536789c118/core/cons.hpp">core/cons.hpp</a>
+    and <a href="https://bitbucket.org/gkatsi/minicsp/src/8c536789c118/core/setcons.hpp">core/setcons.hpp</a>
+    in the source distribution. <p>
+      
+      Minicsp can be used as a library or as a black box solver. It
+      can read instances
+      in <a href="http://www.g12.csse.unimelb.edu.au/minizinc/">flatzinc</a>
+      or <a href="http://www.cril.univ-artois.fr/~lecoutre/benchmarks.html">XCSP</a>. <p>
+
+      Its implementation is based
+      on <a href="http://minisat.se/">MiniSat</a>.
+
+    <h4>Downloads</h4>
+
+    The minicsp source is hosted in a mercurial repository
+    at <a href="https://bitbucket.org/gkatsi/minicsp">bitbucket</a>. You
+    can download the <a href="minicsp-1.0.tar.gz">tarball of version
+    1.0</a>. Note that it
+    requires <a href="http://www.boost.org">boost</a>, and relatively
+    recent versions of flex and bison (for the flatzinc frontend) and
+    libxml (for the XCSP frontend) to compile. If you do not have
+    access to these, you can download
+    a <a href="minicsp-complete-1.0.tar.gz">complete tarball</a> that
+    includes the subset of boost and necessary to compile minicsp and
+    the files produced by flex and bison (but not libxml).
+
+
+    <h4>References</h4>
+
+    <ul>
+      <li id="kbaaai05">
+	<a href="papers/katsirelos-bacchus-aaai05.pdf">Generalized
+	Nogoods in CSPs.</a> George Katsirelos and Fahiem Bacchus, The
+	twentieth national conference on artificial intelligence --
+	AAAI-05.
+      </li>
+      <li>
+	<a href="http://hdl.handle.net/1807/16737">Nogood Processing in
+	  CSPs</a>, George Katsirelos, PhD Thesis, University of Toronto,
+	2008.
+      </li>
+    </ul>
+
+    
+    
+    <address><a href="mailto:gkatsi@gmail.com">George Katsirelos</a></address>
+    </p>
+  </body>
+</html>
