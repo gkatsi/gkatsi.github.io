@@ -30,117 +30,69 @@
         border-top: 1px solid black;
         clear: both;
       }
+
+      ul.menu {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  top: 0;
+	  position: fixed;
+	  width: 100%;
+	  overflow: hidden;
+	  text-align: center;
+	  background-color: white;
+      }
+      li.menu { float: left; }
+      a.menu {
+	  display: block;
+	  padding: 8px 16px; 
+      }
+      a.menu:hover {
+	  background-color: #117171;
+	  color: white;
+      }
+
+      .main {
+	  margin-top: 30px;
+	  padding: 30px;
+      }
     </style>
   </head>
 
   <body>
-    <h1>George Katsirelos </h1>
+    <ul class="menu">
+      <li class="menu"> <a class="menu" href="#about">About me</a> </li>
+      <li class="menu"> <a class="menu" href="#research">Research</a>
+      <li class="menu"> <a class="menu" href="#conf-papers">Conference papers</a> </li>
+      <li class="menu"> <a class="menu" href="#journal-papers">Journal papers</a> </li>
+      <li class="menu"> <a class="menu" href="#theses">Theses</a> </li>
+      <li class="menu"> <a class="menu" href="#software">Software</a> </li>
+    </ul>
+
+    <div class="main">
+    <h1 id="about">George Katsirelos </h1>
     
     I am a researcher at the 
     <a href="https://www6.inrae.fr/mia-paris/Equipes/EkINocs">EkINocs</a> team of the 
     <a href="https://www6.inrae.fr/mia-paris/">MIA Paris</a> unit
     at <a href="http://www.inrae.fr/">INRAE</a>.  
 
-    <h2>Research</h2>
+    <h2 id ="research">Research</h2>
 
     I work on all aspects of combinatorial optimization, focusing
     especially on techniques and problems arising in constraint
     programming and Boolean satisfiability.
 
-    <h4>Software</h4>
-
-    <ul>
-      <li> ELSA is a solver for the Bayesian Network Structure
-	Learning (BNSL) problem, developed by Fulya Tr&ouml;sser based
-	on van Beek and
-	Hoffmann's <a href="https://cs.uwaterloo.ca/~vanbeek/Research/research_ml.html">CPBayes</a>. It
-	combines a variety of techniques from constraint programming
-	with a cut generation algorithm and a greedy linear solver. It
-	is described in <a href="#tdk-ijcai21">[Tr&ouml;sser, de
-	Givry, and Katsirelos, IJCAI 2021]</a>
-	and <a href="#tdk-cp22">[Tr&ouml;sser, de Givry, and
-	Katsirelos, CP 2022]</a>. You can download
-	a <a href="elsa-cp22.tar.gz">tarball</a> of the latest
-	version (corresponding to the CP22 paper).
-      </li>
-      <li> ChromSAT is a solver for the graph coloring problem, which
-	combines constraint- and satisfiability-based reasoning along
-	with a few novel ideas that make it perform well both on small
-	graphs (a few hundred vertices) and on graphs with millions of
-	vertices. It was developed in collaboration with Emmanuel
-	Hebrard and decsribed in <a href="#hk-cp18">[Hebrard and
-	Katsirelos, CP 2018]</a>, <a href="#hk-jair20">[Hebrard and
-	Katsirelos, JAIR 2020]</a> and <a href="#hk-cpaior19">[Hebrard
-	and Katsirelos, CPAIOR 2019]</a>. It is available
-	on <a href="https://github.com/ehebrard/ChromSAT">github</a>.
-      </li>
-      <li> MCSMUS is a state-of-the-art tool
-      to extract MUSes from CNF formulas, described
-      in <a href="#bkcav15">[Bacchus and Katsirelos, CAV 2015]</a>
-      and <a href="#bkcpaior16">[Bacchus and Katsirelos, CPAIOR
-      2016]</a>. It can extract either a single MUS or all MUSes and
-      comes
-      with <a href="http://minisat.se/">MiniSAT</a>, <a href="http://www.labri.fr/perso/lsimon/glucose/">Glucose</a>
-      and <a href="http://fmv.jku.at/lingeling/">lingeling</a>
-      backends. Its source is available
-      on <a href="https://bitbucket.org/gkatsi/mcsmus">Bitbucket</a>.
-      </li>
-      <li> GlucosER is a CDCL (conflict-driven clause learning) SAT
-      solver that uses a restriction of extended resolution. The
-      objective is to get significant speedups in some instances due
-      to the more powerful proof system, without sacrificing
-      performance compared to current CDCL solvers. For more, see
-      <a href="#aksaaai10">[Audemard, Katsirelos and Simon,
-      AAAI-2010]</a>. Download
-      the <a href="glucoser-1.0.tar.gz">source tarball</a> of glucosER
-      1.0 or get a <a href="glucoser_static.zip">statically linked
-      linux 32-bit binary</a>. Note that you
-      need <a href="http://www.boost.org">boost</a> to compile
-      glucosER.
-      </li>
-      <li> <a href="minicsp.html">Minicsp</a> is a clause learning CSP
-      solver that I developed based on the ideas in my thesis (see
-	<a href="#kbaaai05">[Katsirelos and Bacchus, AAAI-2005]</a>,
-	or my <a href="#thesis">thesis</a>) and integrates some
-	improved techniques on clause learning in CSP that were
-	developed later.
-      </li>
-      <li> <a href="https://miat.inrae.fr/toulbar2/">toulbar2</a> is a
-	solver for the weighted constraint satisfaction problem
-	(WCSP), also known as exact maximum a posteriori (MAP)
-	inference in Markov Random Fields (MRF). It is developed by
-	large group of researchers, led
-	by <a href="https://miat.inrae.fr/degivry/">Simon de
-	Givry</a>. Some of my contributions to it are described
-	in <a href="#mdk-cpaior22">[Montalbano, de Givry, Katsirelos,
-	CPAIOR 2022]</a><a href="#rvgkbs-algorithms21">[Rufini et al,
-	Algorithms 2021]</a><a href="#tdk-cpaior20">[Tr&ouml;sser, de
-	Givry, and Katsirelos, CPAIOR
-	2020]</a>, <a href="#srvbkg-ictai19">[Schiex et al, ICTAI
-	2019]</a>, <a href="#dgk-cp17">[de Givry and Katsirelos, CP
-	2017]</a>, <a href="#hsakszg-constraint16">[Hurley et al,
-	Constraints 2016]</a>, <a href="#agkszcp15">[Allouche et al,
-	CP 2015]</a>. We have used toulbar2 for many applications,
-	notably Computational Protein Design (CPD)
-	(<a href="#rvgkbs-algorithms21">[Rufini et al, Algorithms
-	2021]</a>, <a href="#srvbkg-ictai19">[Schiex et al, ICTAI
-	2019]</a>, <a href="#aabdgkspst-aij14">[Allouche et al, AIJ
-	2014]</a>, <a href="#aagksb-bioinformatics13">[Allouche et al,
-	Bioinformatics 2013]</a>, <a href="#atagkbscp12">[Allouche et
-	al, CP2012]</a>).
-      </li>
-    </ul>
-
-    <h4>Conference papers</h4>
-
+    <h4 id="conf-papers">Conference papers</h4>
+    
     <a href="http://dblp.uni-trier.de/pers/hd/k/Katsirelos:George">DBLP</a>, <a href="https://scholar.google.com/citations?user=EvD8ClcAAAAJ&hl=en">Google
     Scholar</a>
     
     <ol>
-      <li id="dks-icml22"> Efficient low rank convex bounds for
-	  pairwise discrete Graphical Model. Valentin Durante, George
-	  Katsirelos, and Thomas Schiex. Proceedings of ICML
-	  2022 </li>
+      <li id="dks-icml22"> <a href="papers/dks-icml22.pdf">Efficient
+	  Low Rank Convex Bounds for Pairwise Discrete Graphical
+	  Models</a>. Valentin Durante, George Katsirelos, and Thomas
+	  Schiex. Proceedings of ICML 2022. </li>
       <li id="tdk-cp22"> <a href="papers/tdk-cp22.pdf">Structured Set
 	  Variable Domains in Bayesian Network Structure
 	  Learning</a>. Fulya Tr&ouml;sser, Simon de Givry, George
@@ -401,7 +353,7 @@
       </li>
     </ol>
 
-    <h4>Journal papers</h4>
+    <h4 id="journal-papers">Journal papers</h4>
     <ol>
       <li id="rvgkbs-algorithms21">
 	<a href="papers/rvgkbs-algorithms21.pdf">Guaranteed Diversity and
@@ -481,13 +433,13 @@
       </li>
     </ol>
 
-
     <h4 id="theses">Theses</h4>
     <ol>
       <li id="fulya-thesis">
-	Exact Methods for Bayesian
-	  Network Structure Learning and Cost Function Networks. Fulya
-	Tr&ouml;sser, PhD, Universit&eacute; de Toulouse, 2022.
+	<a href="papers/fulya-thesis.pdf"> Exact Methods for Bayesian
+	  Network Structure Learning and Cost Function
+	  Networks</a>. Fulya Tr&ouml;sser, PhD, Universit&eacute; de
+	  Toulouse, 2022.
       </li>
       <li id="george-thesis">
 	<a href="http://hdl.handle.net/1807/16737">Nogood Processing in
@@ -496,8 +448,92 @@
       </li>
     </ol>
 
+    <h4 id="software">Software</h4>
+
+    <ul>
+      <li> ELSA is a solver for the Bayesian Network Structure
+	Learning (BNSL) problem, developed by Fulya Tr&ouml;sser based
+	on van Beek and
+	Hoffmann's <a href="https://cs.uwaterloo.ca/~vanbeek/Research/research_ml.html">CPBayes</a>. It
+	combines a variety of techniques from constraint programming
+	with a cut generation algorithm and a greedy linear solver. It
+	is described in <a href="#tdk-ijcai21">[Tr&ouml;sser, de
+	Givry, and Katsirelos, IJCAI 2021]</a>
+	and <a href="#tdk-cp22">[Tr&ouml;sser, de Givry, and
+	Katsirelos, CP 2022]</a>. You can download
+	a <a href="elsa-cp22.tar.gz">tarball</a> of the latest
+	version (corresponding to the CP22 paper).
+      </li>
+      <li> ChromSAT is a solver for the graph coloring problem, which
+	combines constraint- and satisfiability-based reasoning along
+	with a few novel ideas that make it perform well both on small
+	graphs (a few hundred vertices) and on graphs with millions of
+	vertices. It was developed in collaboration with Emmanuel
+	Hebrard and decsribed in <a href="#hk-cp18">[Hebrard and
+	Katsirelos, CP 2018]</a>, <a href="#hk-jair20">[Hebrard and
+	Katsirelos, JAIR 2020]</a> and <a href="#hk-cpaior19">[Hebrard
+	and Katsirelos, CPAIOR 2019]</a>. It is available
+	on <a href="https://github.com/ehebrard/ChromSAT">github</a>.
+      </li>
+      <li> MCSMUS is a state-of-the-art tool
+      to extract MUSes from CNF formulas, described
+      in <a href="#bkcav15">[Bacchus and Katsirelos, CAV 2015]</a>
+      and <a href="#bkcpaior16">[Bacchus and Katsirelos, CPAIOR
+      2016]</a>. It can extract either a single MUS or all MUSes and
+      comes
+      with <a href="http://minisat.se/">MiniSAT</a>, <a href="http://www.labri.fr/perso/lsimon/glucose/">Glucose</a>
+      and <a href="http://fmv.jku.at/lingeling/">lingeling</a>
+      backends. Its source is available
+      on <a href="https://bitbucket.org/gkatsi/mcsmus">Bitbucket</a>.
+      </li>
+      <li> GlucosER is a CDCL (conflict-driven clause learning) SAT
+      solver that uses a restriction of extended resolution. The
+      objective is to get significant speedups in some instances due
+      to the more powerful proof system, without sacrificing
+      performance compared to current CDCL solvers. For more, see
+      <a href="#aksaaai10">[Audemard, Katsirelos and Simon,
+      AAAI-2010]</a>. Download
+      the <a href="glucoser-1.0.tar.gz">source tarball</a> of glucosER
+      1.0 or get a <a href="glucoser_static.zip">statically linked
+      linux 32-bit binary</a>. Note that you
+      need <a href="http://www.boost.org">boost</a> to compile
+      glucosER.
+      </li>
+      <li> <a href="minicsp.html">Minicsp</a> is a clause learning CSP
+      solver that I developed based on the ideas in my thesis (see
+	<a href="#kbaaai05">[Katsirelos and Bacchus, AAAI-2005]</a>,
+	or my <a href="#thesis">thesis</a>) and integrates some
+	improved techniques on clause learning in CSP that were
+	developed later.
+      </li>
+      <li> <a href="https://miat.inrae.fr/toulbar2/">toulbar2</a> is a
+	solver for the weighted constraint satisfaction problem
+	(WCSP), also known as exact maximum a posteriori (MAP)
+	inference in Markov Random Fields (MRF). It is developed by
+	large group of researchers, led
+	by <a href="https://miat.inrae.fr/degivry/">Simon de
+	Givry</a>. Some of my contributions to it are described
+	in <a href="#mdk-cpaior22">[Montalbano, de Givry, Katsirelos,
+	CPAIOR 2022]</a><a href="#rvgkbs-algorithms21">[Rufini et al,
+	Algorithms 2021]</a><a href="#tdk-cpaior20">[Tr&ouml;sser, de
+	Givry, and Katsirelos, CPAIOR
+	2020]</a>, <a href="#srvbkg-ictai19">[Schiex et al, ICTAI
+	2019]</a>, <a href="#dgk-cp17">[de Givry and Katsirelos, CP
+	2017]</a>, <a href="#hsakszg-constraint16">[Hurley et al,
+	Constraints 2016]</a>, <a href="#agkszcp15">[Allouche et al,
+	CP 2015]</a>. We have used toulbar2 for many applications,
+	notably Computational Protein Design (CPD)
+	(<a href="#rvgkbs-algorithms21">[Rufini et al, Algorithms
+	2021]</a>, <a href="#srvbkg-ictai19">[Schiex et al, ICTAI
+	2019]</a>, <a href="#aabdgkspst-aij14">[Allouche et al, AIJ
+	2014]</a>, <a href="#aagksb-bioinformatics13">[Allouche et al,
+	Bioinformatics 2013]</a>, <a href="#atagkbscp12">[Allouche et
+	al, CP2012]</a>).
+      </li>
+    </ul>
 
     <address><a href="mailto:gkatsi@gmail.com">George Katsirelos</a></address>
-    </p>
-  </body>
+</p>
+</div>
+</body>
 </html>
